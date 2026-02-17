@@ -24,7 +24,7 @@ exporters:
       insecure: false
 
   # Optional: log exported data to stdout for debugging
-  logging:
+  debug:
     verbosity: detailed
 
 service:
@@ -32,11 +32,11 @@ service:
     traces:
       receivers: [otlp]
       processors: [memory_limiter, batch]
-      exporters: [otlphttp/newrelic, logging]
+      exporters: [otlphttp/newrelic, debug]
     logs:
       receivers: [otlp]
       processors: [memory_limiter, batch]
-      exporters: [otlphttp/newrelic, logging]
+      exporters: [otlphttp/newrelic, debug]
     metrics:
       receivers: [otlp]
       processors: [memory_limiter, batch]
