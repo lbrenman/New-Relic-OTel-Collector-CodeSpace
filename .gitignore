@@ -1,0 +1,22 @@
+# Environment variables - never commit secrets
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.bak
